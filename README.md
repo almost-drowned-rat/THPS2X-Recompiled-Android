@@ -30,10 +30,15 @@ touch controls.
 
 ## Status
 
-**v2.0.0** - the same version as the Windows / Linux port it is built from
-([THPS2X-Recompiled v2.0.0](https://github.com/almost-drowned-rat/THPS2X-Recompiled/releases/tag/v2.0.0)). Download
-the APK from [Releases](https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android/releases) and install it
-(Android 10+, arm64). It is signed with the project's own key - every later update installs over it.
+**v1.0.0** - based on [THPS 2X Recompiled v2.0.1](https://github.com/almost-drowned-rat/THPS2X-Recompiled/releases/tag/v2.0.1)
+(Windows / Linux) and the toolkit xboxrecomp-option-c `thps2x-v2.0.1`. Download the APK from
+[Releases](https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android/releases) and install it (Android 10+,
+arm64). It is signed with the project's own key - every later update installs over it.
+
+The Android version is an app of its own, with its own version numbers: Android sometimes needs fixes the Windows /
+Linux version does not, so it counts on its own from 1.0.0. Every release names the Windows / Linux version it is
+based on. (The first Android release was called v2.0.0 after the PC version - that numbering was a mistake and was
+dropped; v1.0.0 is newer than it.)
 
 Updates install over the previous version and keep your saves. To get them automatically, add this repository to
 [Obtainium](https://github.com/ImranR98/Obtainium) (`https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android`).
@@ -54,7 +59,7 @@ Tested on:
   bar with the step and its time, **Quit** asks first and stops cleanly.
 - **Graphics driver of your choice** - the system driver or a **Turnip** package (`.adpkg.zip`) from a file; up to 5
   packages are kept and can be switched in the BACK menu. No driver comes with the app.
-- **Everything of the [PC port v2.0.0](https://github.com/almost-drowned-rat/THPS2X-Recompiled#readme)** - the classic
+- **Everything of the [PC port v2.0.1](https://github.com/almost-drowned-rat/THPS2X-Recompiled#readme)** - the classic
   career, THPS 1 score calculation, the original THPS 2 physics, button cheats, custom soundtracks, RECOMP OPTIONS
   (DISPLAY, POST PROCESSING, PERFORMANCE, RENDERING, BUTTON CHEATS, BOOT ANIMATION; on Android the game always runs
   full screen).
@@ -141,7 +146,7 @@ off in the game: OPTIONS > RECOMP OPTIONS > BOOT ANIMATION.
 The APK is built on Linux with `packaging/android/build_android.sh` (Android SDK 36, NDK r30, JDK 21, Gradle 9.9.1;
 the script lists every path it reads as environment variables). The Android project itself is the toolkit's template
 (`templates/android`): it needs the toolkit
-[xboxrecomp-option-c at tag **thps2x-v2.0.0-android**](https://github.com/almost-drowned-rat/xboxrecomp-option-c/tree/thps2x-v2.0.0-android)
+[xboxrecomp-option-c at tag **thps2x-v2.0.1**](https://github.com/almost-drowned-rat/xboxrecomp-option-c/tree/thps2x-v2.0.1)
 (the exact toolkit source is inside the app), its Android runtime SDK and the on-device compiler, made by the
 toolkit's `tools/android` scripts. The release APK is signed with the project's own release key;
 `build_android.sh --release` expects it outside the repository.

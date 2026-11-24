@@ -33,7 +33,7 @@ csso=${THPS_CAPSTONE_SO:?THPS_CAPSTONE_SO = libcapstone.so for arm64}
 priv=${THPS_PRIVATE:?THPS_PRIVATE = the private output root}
 tk=${XBOXRECOMP_DIR:?XBOXRECOMP_DIR = the toolkit checkout}
 vcode=${THPS_VERSION_CODE:-1}
-vname=${THPS_VERSION_NAME:-2.0.0-dev}
+vname=${THPS_VERSION_NAME:-1.0.0-dev}
 
 die() { echo "build_android: $*" >&2; exit 1; }
 first_dir() { local d; for d in "$1"/*/; do [ -d "$d" ] && { echo "${d%/}"; return; }; done; }

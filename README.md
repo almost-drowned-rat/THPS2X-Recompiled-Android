@@ -30,7 +30,7 @@ touch controls.
 
 ## Status
 
-**v1.0.0** - based on [THPS 2X Recompiled v2.0.1](https://github.com/almost-drowned-rat/THPS2X-Recompiled/releases/tag/v2.0.1)
+**v1.1.0** - based on [THPS 2X Recompiled v2.0.1](https://github.com/almost-drowned-rat/THPS2X-Recompiled/releases/tag/v2.0.1)
 (Windows / Linux) and the toolkit xboxrecomp-option-c `thps2x-v2.0.1`. Download the APK from
 [Releases](https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android/releases) and install it (Android 10+,
 arm64). It is signed with the project's own key - every later update installs over it.
@@ -105,8 +105,13 @@ Back up your saves with `adb pull /sdcard/Android/data/io.github.almostdrownedra
 **Uninstalling the app deletes this folder too** - back up first. The game itself (translated and compiled from your
 disc) stays in the app's internal storage.
 
-**Custom soundtracks:** copy folders of MP3 / FLAC / Ogg Vorbis / WAV files into `media/` (each folder with music is
-one album, as on the PC) and choose them in OPTIONS > GENERAL OPTIONS > SOUNDTRACKS.
+**Custom soundtracks:** **BACK > Settings > Soundtracks > Import folder...** and pick a folder with your music (it
+opens in the device's Music folder; SD cards work too). A folder with MP3 / FLAC / Ogg Vorbis / WAV files is one album;
+a folder of album folders gives one album each - so one pick can bring a whole collection. The app copies the music
+into its own `media/` folder (your files stay where they are), shows the albums, songs and size first, and restarts
+the game so it lists them; tap an album on that page to remove it. Then choose them in OPTIONS > GENERAL OPTIONS >
+SOUNDTRACKS. The game plays up to 128 songs per album; an .m3u list in a folder sets the track order. (Copying folders
+into `media/` with adb or a file manager works as well.)
 
 **Boot animation (optional):** your own `boot.mpg` (MPEG-1 video + MP2 audio, like the PC port) plays before the
 game. Either **BACK > Settings > Boot animation > Import file...**, or copy it into `media/` with adb. Turn it on /
@@ -146,7 +151,9 @@ off in the game: OPTIONS > RECOMP OPTIONS > BOOT ANIMATION.
 The APK is built on Linux with `packaging/android/build_android.sh` (Android SDK 36, NDK r30, JDK 21, Gradle 9.9.1;
 the script lists every path it reads as environment variables). The Android project itself is the toolkit's template
 (`templates/android`): it needs the toolkit
-[xboxrecomp-option-c at tag **thps2x-v2.0.1**](https://github.com/almost-drowned-rat/xboxrecomp-option-c/tree/thps2x-v2.0.1)
+[xboxrecomp-option-c at tag **thps2x-v2.0.1**](https://github.com/almost-drowned-rat/xboxrecomp-option-c/tree/thps2x-v2.0.1) with the Soundtracks page of its Android template,
+`xboxrecomp-option-c-thps2x-v2.0.1-soundtracks.patch` from the
+[v1.1.0 release](https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android/releases/tag/v1.1.0)
 (the exact toolkit source is inside the app), its Android runtime SDK and the on-device compiler, made by the
 toolkit's `tools/android` scripts. The release APK is signed with the project's own release key;
 `build_android.sh --release` expects it outside the repository.

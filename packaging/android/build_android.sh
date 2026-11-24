@@ -204,7 +204,7 @@ if [ "$task" = assembleRelease ]; then
 fi
 "$gradle/bin/gradle" -p "$tmpl" --no-daemon --console=plain --project-cache-dir "$out/gradle-cache" \
     "-PappId=io.github.almostdrownedrat.thps2x" "-PappName=THPS 2X Recomp" "-PportTitle=THPS 2X Recomp" \
-    "-PsavesPrefix=THPS2X" "-PtouchName=THPS 2X touch controls" "-PsetupGame=THPS 2X" "-PsetupDisc=THPS 2X (USA)" \
+    "-PsavesPrefix=THPS2X" "-PtouchName=THPS 2X touch controls" "-PmediaTracks=128" "-PsetupGame=THPS 2X" "-PsetupDisc=THPS 2X (USA)" \
     "-PversionCode=$vcode" "-PversionName=$vname" "-PkeyAlias=thps2x" "-PportDir=$portDir" "-PportRes=$pk/res" \
     "-Psdl3Src=$sdl3" "-PndkPath=$ndk" "-PoutDir=$out" "-PprebuiltLibs=$out/prebuilt" "-PassetsDir=$assets" \
     "-PpythonPrefix=$py" "-Ptoolkit=$tk" "-PadrenotoolsSrc=$adreno" "${sign[@]}" "$task"

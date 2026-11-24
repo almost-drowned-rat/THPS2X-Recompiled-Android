@@ -42,7 +42,7 @@ Tested on:
 
 | Device | Chip / GPU | Driver | Result |
 |---|---|---|---|
-| AYN Odin 2 Portal | Snapdragon 8 Gen 2 / Adreno 740 | purple-turnip T30 | menus and levels at 60 fps, built-in controls work |
+| AYN Odin 2 Portal | Snapdragon 8 Gen 2 / Adreno 740 | purple-turnip T30 | menus and levels at 60 fps, 120 fps with FRAME RATE 120, built-in controls work |
 
 ## Features
 
@@ -58,6 +58,8 @@ Tested on:
   career, THPS 1 score calculation, the original THPS 2 physics, button cheats, custom soundtracks, RECOMP OPTIONS
   (DISPLAY, POST PROCESSING, PERFORMANCE, RENDERING, BUTTON CHEATS, BOOT ANIMATION; on Android the game always runs
   full screen).
+- **60 or 120 fps** - FRAME RATE 120 in RECOMP OPTIONS runs on the device too (the game never speeds up), on a
+  display with 120 Hz.
 - **Touch controls**, gamepads and a handheld's own controls.
 - **BACK menu** - controls, saves export / import, log export, boot animation, graphics driver, licences.
 

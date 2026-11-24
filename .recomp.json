@@ -1,0 +1,19 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Tony Hawk's Pro Skater 2x",
+  "wikidata": "Q21772565",
+  "system": "Xbox",
+  "type": "recomp",
+  "original": [
+    { "region": "USA" }
+  ],
+  "project": "THPS 2X Recompiled - Android",
+  "status": "released",
+  "targets": ["Android"],
+  "toolchain": "xboxrecomp-option-c",
+  "approach": "Static recompilation of the player's own disc on the device at the first start, Vulkan renderer",
+  "links": [
+    { "label": "THPS 2X Recompiled (Windows / Linux)", "url": "https://github.com/almost-drowned-rat/THPS2X-Recompiled" },
+    { "label": "xboxrecomp toolkit (option-c)", "url": "https://github.com/almost-drowned-rat/xboxrecomp-option-c" }
+  ]
+}

@@ -30,8 +30,9 @@ touch controls.
 
 ## Status
 
-**v1.1.1** - based on [THPS 2X Recompiled v2.0.2](https://github.com/almost-drowned-rat/THPS2X-Recompiled/releases/tag/v2.0.2)
-(Windows / Linux) and the toolkit xboxrecomp-option-c `thps2x-v2.0.2`: overwriting a save works again. Download the APK from
+**v1.1.2** - based on [THPS 2X Recompiled v2.0.2](https://github.com/almost-drowned-rat/THPS2X-Recompiled/releases/tag/v2.0.2)
+(Windows / Linux) and the toolkit xboxrecomp-option-c `thps2x-v2.0.2-android` (the Soundtracks page is part of the
+toolkit now). Download the APK from
 [Releases](https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android/releases) and install it (Android 10+,
 arm64). It is signed with the project's own key - every later update installs over it.
 
@@ -151,9 +152,7 @@ off in the game: OPTIONS > RECOMP OPTIONS > BOOT ANIMATION.
 The APK is built on Linux with `packaging/android/build_android.sh` (Android SDK 36, NDK r30, JDK 21, Gradle 9.9.1;
 the script lists every path it reads as environment variables). The Android project itself is the toolkit's template
 (`templates/android`): it needs the toolkit
-[xboxrecomp-option-c at tag **thps2x-v2.0.2**](https://github.com/almost-drowned-rat/xboxrecomp-option-c/tree/thps2x-v2.0.2) with the Soundtracks page of its Android template,
-`xboxrecomp-option-c-thps2x-v2.0.2-soundtracks.patch` from the
-[v1.1.1 release](https://github.com/almost-drowned-rat/THPS2X-Recompiled-Android/releases/tag/v1.1.1)
+[xboxrecomp-option-c at tag **thps2x-v2.0.2-android**](https://github.com/almost-drowned-rat/xboxrecomp-option-c/tree/thps2x-v2.0.2-android)
 (the exact toolkit source is inside the app), its Android runtime SDK and the on-device compiler, made by the
 toolkit's `tools/android` scripts. The release APK is signed with the project's own release key;
 `build_android.sh --release` expects it outside the repository.
